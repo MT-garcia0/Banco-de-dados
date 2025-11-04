@@ -1,25 +1,31 @@
 # Banco-de-dados
 --Encontrar a nota máxiam, a minima e a média de horas de sono--
+```
 SELECT 
 MAX(nota_exame) AS nota_maxima,
 MIN(nota_exame) AS nota_minima,
 AVG(horas_de_sono) AS media_horas_sono
 FROM notas_alunos;
+```
 -- Contar quantos alunnos tiraram menos de 25 no exame:
+```
 SELECT COUNT(id_aluno) AS total_alunos_baixo_desempenho
 FROM notas_alunos
 WHERE nota_exame < 25.0;
+```
 -- lista as 5 alunos com as maiores notas no exame (nota_exame), mostrando a nota e as horas estudadas:
+```
 SELECT id_aluno, nota_exame, horas_estudadas
 FROM notas_alunos
 ORDER BY nota_exame desc
 LIMIT 5;
-
+```
 -- Listar todos os alunos ordenados do menos para o maior percentual de precença:
+```
 SELECT id_aluno, percental_presenca
 FROM notas_alunos
 ORDER BY percentual_presenca ASC;
-
+```
 
 -- Filtragem avançada (goup by, having)
 -- Classificar os alunos por faixa de notas_anteriores
