@@ -52,3 +52,14 @@ SELECT AVG(nota_exame) AS media_exame_alta_presenca
 FROM notas_alunos
 WHERE percentual_presenca > 90.0;
 ```
+Usar na procima aula 
+INSERT INTO usuaios_login (nome_usuario, senha_hash) VALUES 
+('Tiago Padavani', SHA2('senhadotiago',256));
+```
+SELECT id_usuario
+FROM usurios_login
+WHERE
+nome_sarios='Tiago Padavani'
+ AND senha_hash=SHA2('senhadotiago',256)
+LIMIT 1;
+```
